@@ -52,7 +52,7 @@ namespace SpaceShooter
             }
             if (Keyboard.IsKeyPressed(Key.Space))
             {
-                
+                createfire();
             }
             if (Keyboard.IsKeyPressed(Key.Escape))
             {
@@ -70,7 +70,20 @@ namespace SpaceShooter
         }
         private void createfire()
         {
-            PictureBox new 
+            PictureBox fire = new PictureBox();
+            Image img = SpaceShooter.Properties.Resources.laserRed16;
+            fire.Image = img;
+            fire.Width = img.Width;
+            fire.Height = img.Height;
+            fire.BackColor = Color.Transparent;
+            //fire.Size = new Size(30, 30);
+            //spaceship.SizeMode = PictureBoxSizeMode.StretchImage;
+            System.Drawing.Point location = new System.Drawing.Point();
+            location.X = spaceship.Left+ spaceship.Width / 2;
+            location.Y = spaceship.Bottom-spaceship.Height-5;
+            fire.Location = location;
+
+            this.Controls.Add(fire);
         }
         private void SetPlayer()
         {
