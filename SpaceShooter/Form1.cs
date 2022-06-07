@@ -54,6 +54,10 @@ namespace SpaceShooter
             {
                 
             }
+            if (Keyboard.IsKeyPressed(Key.Escape))
+            {
+                this.Close();
+            }
         }
         public void fire()
         {
@@ -63,6 +67,10 @@ namespace SpaceShooter
         private void Form1_Load(object sender, EventArgs e)
         {
             SetPlayer();
+        }
+        private void createfire()
+        {
+            PictureBox new 
         }
         private void SetPlayer()
         {
